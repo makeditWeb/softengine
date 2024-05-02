@@ -25,7 +25,7 @@ main {
     align-items: flex-start;
 
     border-radius: 8px;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #e9e9e9;
     
     overflow: hidden;
 }
@@ -46,7 +46,7 @@ main {
 }
 
 .menu_list > li:not(:last-child) {
-  border-bottom: 1px solid #bcbcbc;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 .content_wrap {
@@ -62,7 +62,7 @@ main {
     
     padding: 20px;
     border-radius: 4px;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #e9e9e9;
 }
 
 .left_chart_wrap > h2 {
@@ -79,11 +79,9 @@ main {
     width: 100% !important;
 }
 
-
-
 /* 우측 영역 */
 .content_right_wrap {
-    min-width: 500px;
+    min-width: 720px;
 
     display: flex;
     flex-direction: column;
@@ -112,7 +110,7 @@ main {
     align-items: flex-start;
 
     border-radius: 8px;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #e9e9e9;
     
     overflow: hidden;
 }
@@ -135,7 +133,7 @@ main {
 }
 
 .code_wrap > li:not(:last-child) {
-    border-bottom: 1px solid #bcbcbc;
+    border-bottom: 1px solid #e9e9e9;
 }
 
 .code_wrap .code_wrap_header{
@@ -148,7 +146,7 @@ main {
 
 /* 우측 하단 차트 영역 */
 .right_chart_wrap > canvas {
-    width: 50% !important;
+    width: 100% !important;
     height: auto !important;
     margin: 0 auto;
 }
@@ -156,7 +154,7 @@ main {
 .right_chart_wrap {
     width: 100%;
     border-radius: 4px;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #e9e9e9;
 }
 
 .right_chart_wrap .chart_header {
