@@ -1,0 +1,155 @@
+
+/* GNB 영역 */
+.header_container {
+    width: calc(100% - 32px);
+    padding: 16px;
+
+    background: #f5f5f5;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_left_wrap, .header_right_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header_left_wrap {
+    justify-content: flex-start;
+}
+
+.header_right_wrap {
+    justify-content: flex-end;
+}
+
+/* 좌측 로고 */
+.header_left_wrap > img {
+    width: 128px;
+    height: auto;
+
+    margin-right: 20px;
+}
+
+/* 상단 메뉴 링크 리스트 */
+.nav_list {
+    margin: 0px;
+    display: flex;
+}
+
+.nav_list > li:not(:first-child) {
+    margin-left: 12px;
+}
+
+.nav_list > li > a {
+  font-size: 18px;
+  line-height: 125%;
+  text-decoration: none;
+  color: #CECECE;
+
+  cursor: pointer;
+}
+
+.nav_list > li > a:hover {
+  color: #858585;
+}
+
+
+.nav_list > li.active > a {
+    color: #212121;
+}
+
+/* GNB 우측 영역 */
+.header_right_wrap > span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #212121;
+
+  margin-right: 8px;
+}
+
+.refresh_wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-right: 24px;
+}
+
+.refresh_wrap > span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #3e3e3e;
+
+  margin-right: 8px;
+}
+
+.refresh_wrap > select {
+  min-width: 60px;
+  padding: 4px;
+  
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #bcbcbc;
+
+  margin-right: 12px;
+}
+
+.refresh_wrap > button {
+    width: 32px;
+    height: 28px;
+    padding: 4px;
+    
+    background: #3ed224;
+    border-radius: 4px;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 우측 로고 */
+.header_right_wrap > img {
+    width: 50px;
+    height: auto;
+}
+
+/* footer 영역 */
+.footer_container {
+  height: 24px;
+  padding: 8px;
+  background: #EdEdEd;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_left_wrap, .footer_right_wrap  {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+}
+
+.footer_left_wrap > img, .footer_right_wrap > img {
+    margin-right: 8px;
+
+}
+
+.footer_left_wrap > span {
+    color: #28a745;
+}
+
+
+/* 기본적인 css */
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: #ff4e4e;
+}

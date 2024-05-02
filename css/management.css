@@ -1,0 +1,122 @@
+
+
+main {
+  width: calc(100% - 200px);
+  /* 160px = 상단 TopNavigation height + Footer height + main의 margin-top + margin-bottom 값 */
+  min-height: calc(100vh - 160px);
+  margin: 20px 100px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 메인 좌측 메뉴 리스트 영역 */
+.menu_wrap  {
+  margin-right: 24px;
+}
+
+.menu_list {
+    width: 240px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    border-radius: 8px;
+    border: 1px solid #bcbcbc;
+    
+    overflow: hidden;
+}
+
+.menu_list > li {
+    width: calc( 100% - 24px);
+    padding: 12px;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.menu_list > li:hover, 
+.menu_list > li.active {
+    background: #007bff;
+    color: #ffffff;
+}
+
+.menu_list > li:not(:last-child) {
+    border-bottom: 1px solid #bcbcbc;
+}
+
+
+/* 메인 우측 컨텐츠 영역 */
+.content_wrap {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.top_header_wrap  {
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+    border: 1px solid #bcbcbc;
+
+    margin-bottom: 12px;
+}
+
+.top_header_wrap  > h2 {
+    font-weight: 700;
+    line-height: 125%;
+}
+
+.table_wrap {
+    padding: 12px;
+
+    border-radius: 8px;
+    border: 1px solid #bcbcbc;
+}
+
+.table_wrap > table {
+  width: 100%;
+}
+
+.table_wrap > table tr, td {
+    padding: 12px;
+    cursor: pointer;
+
+}
+
+.table_wrap > table tr:not(:last-child) {
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.table_wrap > table tr.active {
+    background: #e2e2e2;
+}
+
+.table_wrap > table tr:hover {
+    background: #EdEdEd;
+}
+
+.table_wrap > table tr td:first-child {
+    font-weight: 800;
+}
+
+.table_wrap > table tr td > .clear_button {
+    padding: 4px 6px;
+
+    background: #212121;
+    color: #ffffff;
+
+    border-radius: 4px;
+    border: none;
+    
+    cursor: pointer;
+}
