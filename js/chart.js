@@ -23,7 +23,7 @@
         y: {
           min: -1.0,
           max: 1.0
-        }
+        },
       }
     }
   });
@@ -35,16 +35,35 @@ new Chart(rightPieChartCTX, {
     labels: ['0.0.0', '10.2.2', '3.3.2', '3.4.2', '5.4.3', '7.4.2', '8.4.5', '9.2.2'],
     datasets: [{
     label: 'My First Dataset',
-    data: [300, 50, 100],
+    data: [, ,,,,,,99], 
     backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)'
+      'rgb(135, 255, 125)',
+      'rgb(230, 126, 129)',
+      'rgb(205, 127, 129)',
+      'rgb(240, 126, 130)',
+      'rgb(249, 202, 129)',
+      'rgb(214, 126, 128)',
+      'rgb(139, 119, 182)',
+      'rgb(248, 126, 129)',
     ],
     hoverOffset: 4
     }]
   },
   options: {
-    responsive: true
+    responsive: false, 
+    maintainAspectRatio: true,
+    layout: {
+        padding: 12
+    },
+    radius: '100%',
+    spacing: 0,
+    aspectRatio: 2,
+
+    // legend: {
+    //   display: false,
+    //   fullWidth: true,
+    //   position: 'top',
+    // },
   }
+    
 });
