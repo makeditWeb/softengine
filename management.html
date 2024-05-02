@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href='./css/reset.css' />
+    <link rel="stylesheet" type="text/css" href='./css/globals.css' />
+    <link rel="stylesheet" type="text/css" href='./css/management.css' />
+
+    <title>Management</title>
+</head>
+
+<body>
+    <!-- 상단 GNB 영역 -->
+    <header class='header_container'>
+        <div class='header_left_wrap'>
+            <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
+            <ul class='nav_list'>
+                <li><a href='#'>xHome</a></li>
+                <li><a href='#'>Install</a></li>
+                <li><a href='#'>Antenna</a></li>
+                <li><a href='#'>Modem</a></li>
+                <li><a href='#'>Network</a></li>
+                <li><a href='#'>Diagnostics</a></li>
+                <li class='active'><a href='#'>Management</a></li>
+            </ul>
+        </div>
+
+        <div class='header_right_wrap'>
+            <div class='refresh_wrap'>
+                <span>Auto-Refresh</span>
+                <select class='number-select-box'>
+                    <option value='0' selected>0</option>
+                </select>
+
+                <button class=''>
+                    <span role='img'>
+                        <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
+                    </span>
+                </button>
+            </div>
+
+            <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+        </div>
+
+    </header>
+
+    <main>
+        <aside class='menu_wrap'>
+            <ul class='menu_list'>
+                <li class='active'>Management Stats</li>
+                <li>Switch UT Software</li>
+                <li>Switch UT Mode</li>
+            </ul>
+        </aside>
+
+        <section class='content_wrap'>
+            <div class='top_header_wrap'>
+                <h2>UT Network Management Status and Statistics</h2>
+            </div>
+
+            <div class='table_wrap'>
+                <table cellpadding="0">
+                    <tr class='active'>
+                        <td>
+                            <p>Software Download Status</p>
+                        </td>
+                        <td>
+                            <button class='clear_button'>Clear Stats</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>API Version Info</p>
+                        </td>
+                        <td>
+                            <p>1.0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Configuration Server Bundle Notifications Applied</p>
+                        </td>
+                        <td>
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Configuration Server Bundle Notifications Errors</p>
+                        </td>
+                        <td>
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Configuration Server Bundle Notifications Received</p>
+                        </td>
+                        <td>
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Configuration Server URL</p>
+                        </td>
+                        <td>
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Operational Software Bundle</p>
+                        </td>
+                        <td>
+                            <p>
+                                --no-check-certificate<br/>
+                                https://ces.devicehub.oneweb.net/api/cm/
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Current Software Bundle</p>
+                        </td>
+                        <td>
+                            <p>main</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Current Software Download Log Level</p>
+                        </td>
+                        <td>
+                            <p>into</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>UT Management IP Address</p>
+                        </td>
+                        <td>
+                            <p>Unknown</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Last Software Download Failure Code</p>
+                        </td>
+                        <td>
+                            <p>none</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Last Software Download Failure Reason</p>
+                        </td>
+                        <td>
+                            <p>none</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Current Software Download State</p>
+                        </td>
+                        <td>
+                            <p>Configuration Request not send. Waiting for Management IP</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Current Software Download State(Advanced)</p>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>UT Service Check Enabled?</p>
+                        </td>
+                        <td>
+                            <p>false</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Current Software Download Statecode</p>
+                        </td>
+                        <td>
+                            <p class='bold red'>7.7.2</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Software Update Percent</p>
+                        </td>
+                        <td>
+                            <p>0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Next Configuration Request Reason</p>
+                        </td>
+                        <td>
+                            <p>software Download Complete</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class='footer_container'>
+        <div class='footer_left_wrap'>
+            <img src='assets/svg/git-branch.svg' alt='깃 그래프 아이콘' width='18px' height='18px' />
+            <span>SSM_3.2.1.91 (main)</span>
+        </div>
+        <div class='footer_right_wrap'>
+            <img src='assets/svg/clock.svg' alt='시계 아이콘' width='18px' height='18px' />
+            <span>Uptime 0.17.53.39</span>
+        </div>
+    </footer>
+</body>
+<script src="./js/aside.js"></script>
+</html>

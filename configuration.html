@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration</title>
+
+    <link rel="stylesheet" type="text/css" href='./css/reset.css' />
+    <link rel="stylesheet" type="text/css" href='./css/globals.css' />
+    <link rel="stylesheet" type="text/css" href='./css/management.css' />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+<body>
+    
+
+        <!-- 상단 GNB 영역 -->
+        <header class='header_container'>
+            <div class='header_left_wrap'>
+                <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
+                <ul class='nav_list'>
+                    <li><a href='./index.html'>xHome</a></li>
+                    <li><a href='./install.html'>Install</a></li>
+                    <li><a href='./antenna.html'>Antenna</a></li>
+                    <li><a href='./modem.html'>Modem</a></li>
+                    <li><a href='./network.html'>Network</a></li>
+                    <li class='active'><a href='./configuration.html'>Diagnostics</a></li>
+                    <li ><a href='./management.html'>Management</a></li>
+                </ul>
+            </div>
+    
+            <div class='header_right_wrap'>
+                <div class='refresh_wrap'>
+                    <span>Auto-Refresh</span>
+                    <select class='number-select-box'>
+                        <option value='0' selected>0</option>
+                    </select>
+    
+                    <button class=''>
+                        <span role='img'>
+                            <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
+                        </span>
+                    </button>
+                </div>
+    
+                <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+            </div>
+    
+        </header>
+
+        <main>
+            <aside class='menu_wrap'>
+                <ul class='menu_list'>
+                    <li>UT Status</li>
+                    <li>Host Processor Logs</li>
+                    <li class='active'>Configuration</li>
+                    <li>Advanced Configuration</li>
+                    <li>Fault Management</li>
+                    <li>CNX Manager</li>
+                    <li>System Monitor Stats</li>
+                    <li>Sensor and Device Info</li>
+                    <li>Statisics</li>
+                    <li>Self Test Result</li>
+                </ul>
+            </aside>
+    
+            <section class='content_wrap'>
+                <div class='top_header_wrap'>
+                    <h2>UT Network Management Status and Statistics</h2>
+                </div>
+    
+                <div class='table_wrap'>
+                    <table cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th>Group</th>
+                                <th>Name</th>
+                                <th>Value</th>
+                                <th>Sourece</th>
+                            </tr>
+                            <tr>
+                                <td>firewall</td>
+                                <td>ces_enabled</td>
+                                <td class="table_value">{...}</td>
+                                <td>dynamic_subgroup</td>
+                            </tr>
+                            <tr>
+                                <td>firewall</td>
+                                <td>fw_enabled</td>
+                                <td class="table_value">false</td>
+                                <td>cfg_ces.json</td>
+                            </tr>
+                            <tr>
+                                <td>firewall</td>
+                                <td>mgt_subnets</td>
+                                <td class="table_value">{...}</td>
+                                <td>dynamic_subgroup</td>
+                            </tr>
+                            <tr>
+                                <td>firewall</td>
+                                <td>qtools_enabled</td>
+                                <td class="table_value">false</td>
+                                <td>cfg_ces.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>dhcp_ant_lan_enabled</td>
+                                <td class="table_value">true</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>dhcp_cnx_lan_enabled</td>
+                                <td class="table_value">false</td>
+                                <td>cfg_adv.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>dhcp_lease_interval_h</td>
+                                <td class="table_value">12</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>dhcpv4_cnx_end_offset</td>
+                                <td class="table_value">126</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>dhcpv4_cnx_start_offset</td>
+                                <td class="table_value">11</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>dhcpv6_end_offset</td>
+                                <td class="table_value">::ff</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>dhcpv6_start_offset</td>
+                                <td class="table_value">::02</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>ifentries</td>
+                                <td class="table_value">{...}</td>
+                                <td>dynamic_subgroup</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>mgt_static_dns_servers</td>
+                                <td class="table_value">[...]</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>nat_enabled</td>
+                                <td class="table_value">true</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>pbr_mbt_enabled</td>
+                                <td class="table_value">true</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>ifconfig</td>
+                                <td>static_routes</td>
+                                <td class="table_value">{...}</td>
+                                <td>dynamic_subgroup</td>
+                            </tr>
+                            <tr>
+                                <td>amc</td>
+                                <td>aim_no_response_fault</td>
+                                <td class="table_value">5</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>amc</td>
+                                <td>aim_post_info_location</td>
+                                <td class="table_value">507070</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>amc</td>
+                                <td>aim_timestamp_header</td>
+                                <td class="table_value">false</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                            <tr>
+                                <td>amc</td>
+                                <td>anc_port</td>
+                                <td class="table_value">507070</td>
+                                <td>cfg_default.json</td>
+                            </tr>
+                        </thead>
+                    </table>
+    
+                </div>
+            </section>
+        </main>
+    
+        <footer class='footer_container'>
+            <div class='footer_left_wrap'>
+                <img src='assets/svg/git-branch.svg' alt='깃 그래프 아이콘' width='18px' height='18px' />
+                <span>SSM_3.2.1.91 (main)</span>
+            </div>
+            <div class='footer_right_wrap'>
+                <img src='assets/svg/clock.svg' alt='시계 아이콘' width='18px' height='18px' />
+                <span>Uptime 0.17.53.39</span>
+            </div>
+        </footer>
+</body>
+<script src="./js/aside.js"></script>
+</html>

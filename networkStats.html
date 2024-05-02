@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuration</title>
 
     <link rel="stylesheet" type="text/css" href='./css/reset.css' />
     <link rel="stylesheet" type="text/css" href='./css/globals.css' />
-    <link rel="stylesheet" type="text/css" href='./css/management.css' />
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href='./css/network.css' />
 
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+
+    <title>Network</title>
 </head>
-<body>
-    
 
+<body>
         <!-- 상단 GNB 영역 -->
         <header class='header_container'>
             <div class='header_left_wrap'>
                 <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
                 <ul class='nav_list'>
-                    <li class='active'><a href='./index.html'>xHome</a></li>
+                    <li><a href='./index.html'>xHome</a></li>
                     <li><a href='./install.html'>Install</a></li>
                     <li><a href='./antenna.html'>Antenna</a></li>
-                    <li><a href='./modem.html'>Modem</a></li>
+                    <li ><a href='./modem.html'>Modem</a></li>
                     <li><a href='./network.html'>Network</a></li>
                     <li><a href='./configuration.html'>Diagnostics</a></li>
-                    <li ><a href='./management.html'>Management</a></li>
+                    <li class='active' ><a href='./management.html'>Management</a></li>
                 </ul>
             </div>
     
@@ -48,5 +49,30 @@
             </div>
     
         </header>
+
+    <main>
+        <aside class='menu_wrap'>
+            <ul class='menu_list'>
+                <li class='active'><a href="./networkStats.html">Network Stats</a></li>
+                <li><a href="./network.html" >Packet Graphs</a></li>
+            </ul>
+        </aside>
+
+
+    </main>
+
+    <footer class='footer_container'>
+        <div class='footer_left_wrap'>
+            <img src='assets/svg/git-branch.svg' alt='깃 그래프 아이콘' width='18px' height='18px' />
+            <span>SSM_3.2.1.91 (main)</span>
+        </div>
+        <div class='footer_right_wrap'>
+            <img src='assets/svg/clock.svg' alt='시계 아이콘' width='18px' height='18px' />
+            <span>Uptime 0.17.53.39</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/chart.js"></script>
 </body>
+
 </html>

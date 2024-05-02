@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <link rel="stylesheet" type="text/css" href='./css/reset.css' />
+    <link rel="stylesheet" type="text/css" href='./css/globals.css' />
+    <link rel="stylesheet" type="text/css" href='./css/management.css' />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+
+<body>
+
+    <!-- 상단 GNB 영역 -->
+    <header class='header_container'>
+        <div class='header_left_wrap'>
+            <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
+            <ul class='nav_list'>
+                <li><a href='./index.html'>xHome</a></li>
+                <li class='active'><a href='./install.html'>Install</a></li>
+                <li><a href='./antenna.html'>Antenna</a></li>
+                <li><a href='./mordm.html'>Modem</a></li>
+                <li><a href='./network.html'>Network</a></li>
+                <li><a href='./configuration.html'>Diagnostics</a></li>
+                <li ><a href='./management.html'>Management</a></li>
+            </ul>
+        </div>
+
+        <div class='header_right_wrap'>
+            <div class='refresh_wrap'>
+                <span>Auto-Refresh</span>
+                <select class='number-select-box'>
+                    <option value='0' selected>0</option>
+                </select>
+
+                <button class=''>
+                    <span role='img'>
+                        <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
+                    </span>
+                </button>
+            </div>
+
+            <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+        </div>
+
+    </header>
+
+    <section class="login">
+<!-- 
+        <div class="video-background">
+            <iframe src="https://player.vimeo.com/video/490757369?background=1"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div> -->
+
+        <div class="login_wrap">
+            <h2 class="login-title">
+                상용저궤도위성 기반 통신체계
+                <br>위성단말 운영자 콘솔
+            </h2>
+            <div class="login_form">
+                <form>
+                    <p class="form-title">로그인</p>
+                    <div class="info">
+                        <input class="email" type="text" placeholder="아이디" id="Id">
+                        <input class="password" type="password" placeholder="Password" id="password">
+                    </div>
+                   
+                    <div class="remember_wrapp">
+                        <input value="true" type="checkbox">
+                        <label>Remember me</label>
+                    </div>
+
+                    <button type="button" class="submit-btn" onclick="signIn()">Sign In</button>
+                
+                    <a href="javascript:void(0)" class="signUp_link">Don't have an account? <span>Signup Now</span></a>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

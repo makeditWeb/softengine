@@ -1,0 +1,158 @@
+
+/* login */
+
+button{
+    box-shadow: none;
+    border: none;
+}
+
+.login{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.video-background {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+
+.video-background iframe{
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+
+.login_wrap{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Pretendard',sans-serif;
+}
+
+.login_form{
+    background: rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.login_form form{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.login_form form .info{
+    width: 100%;
+}
+
+.login_form input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.login_form input:first-child{
+    margin-bottom: 0.8rem;
+}
+
+.submit-btn{
+    border-radius: 15px;
+background:  #000dc7;
+width: 100%;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+font-weight: 600;
+color: #fff;
+font-family: 'Pretendard',sans-serif;
+margin-top: 12px;
+text-decoration: none;
+}
+
+.remember_wrapp{
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    gap: 10px;
+}
+
+.remember_wrapp input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.remember_wrapp label{
+    font-size: 14px;
+    font-family: 'Pretendard',sans-serif;
+}
+
+.form-title{
+    text-align: center;
+    margin: 15px 0 20px; 
+    font-size: 25px;
+    font-family: 'Pretendard',sans-serif;
+    font-weight: 600;
+}
+
+.login-title{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: #393939;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.signUp_link{
+    font-size: 12px;
+    color: #222;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.signUp_link span{
+    color: #000dc7;
+}
+
+
+/* 로그아웃 */
+.logout_info{
+    text-align: center;
+}
+
+
+.logout_form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.logout_form p{
+    font-size: 26px;
+    line-height: 1.2;
+    font-family: 'Pretendard',sans-serif;
+    color: #777;
+}
+
+.logout_form .submit-btn{
+    width: 150px;
+    margin: 20px auto;
+}
