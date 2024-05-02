@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href='./css/reset.css' />
+    <link rel="stylesheet" type="text/css" href='./css/globals.css' />
+    <link rel="stylesheet" type="text/css" href='./css/network.css' />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Network</title>
+</head>
+
+<body>
+    <!-- 상단 GNB 영역 -->
+    <header class='header_container'>
+        <div class='header_left_wrap'>
+            <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
+            <ul class='nav_list'>
+                <li><a href='#'>xHome</a></li>
+                <li><a href='#'>Install</a></li>
+                <li><a href='#'>Antenna</a></li>
+                <li><a href='#'>Modem</a></li>
+                <li><a href='#'>Network</a></li>
+                <li><a href='#'>Diagnostics</a></li>
+                <li class='active'><a href='#'>Management</a></li>
+            </ul>
+        </div>
+
+        <div class='header_right_wrap'>
+            <div class='refresh_wrap'>
+                <span>Auto-Refresh</span>
+                <select class='number-select-box'>
+                    <option value='0' selected>0</option>
+                </select>
+
+                <button class=''>
+                    <span role='img'>
+                        <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
+                    </span>
+                </button>
+            </div>
+
+            <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+        </div>
+
+    </header>
+
+    <main>
+        <aside class='menu_wrap'>
+            <ul class='menu_list'>
+                <li class='active'>Network Stats</li>
+                <li>Packet Graphs</li>
+            </ul>
+        </aside>
+
+        <section class='content_wrap'>
+            <div class='left_chart_wrap'>
+                <h2>Packet Graphs</h2>
+                <canvas id="leftGridChart"></canvas>
+            </div>
+            <div class='content_right_wrap'>
+                <div class='right_content_wrap'>
+                    <ul class='code_wrap'>
+                        <li class='code_wrap_header'>Current Active Statecodes</li>
+                        <li class='selected'>3.4.2</li>
+                        <li>4.2.2</li>
+                        <li>4.3.2</li>
+                        <li>7.7.2</li>
+                        <li>4.1.3</li>
+                        <li>0.0.0</li>
+                    </ul>
+                    <ul class='code_wrap'>
+                        <li class='code_wrap_header'>Current Recovery Actions</li>
+                        <li class='selected'>None</li>
+                    </ul>
+                </div>
+                <div class='right_chart_wrap'>
+                    <div class='chart_header'>
+                        <span>Availability: 0%</span>
+                    </div>
+                    <canvas id="rightPieChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class='footer_container'>
+        <div class='footer_left_wrap'>
+            <img src='assets/svg/git-branch.svg' alt='깃 그래프 아이콘' width='18px' height='18px' />
+            <span>SSM_3.2.1.91 (main)</span>
+        </div>
+        <div class='footer_right_wrap'>
+            <img src='assets/svg/clock.svg' alt='시계 아이콘' width='18px' height='18px' />
+            <span>Uptime 0.17.53.39</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src='js/chart.js' />
+</body>
+
+</html>
