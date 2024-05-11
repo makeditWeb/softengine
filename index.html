@@ -11,42 +11,383 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
 
-        <!-- 상단 GNB 영역 -->
-        <header class='header_container'>
-            <div class='header_left_wrap'>
-                <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
-                <ul class='nav_list'>
-                    <li class='active'><a href='./index.html'>xHome</a></li>
-                    <li><a href='./install.html'>Install</a></li>
-                    <li><a href='./antenna.html'>Antenna</a></li>
-                    <li><a href='./modem.html'>Modem</a></li>
-                    <li><a href='./network.html'>Network</a></li>
-                    <li><a href='./configuration.html'>Diagnostics</a></li>
-                    <li ><a href='./management.html'>Management</a></li>
+    <!-- 상단 GNB 영역 -->
+    <header class="home_nave">
+        <nav>
+            <div class="nav_list">
+                <ul>
+                    <li>
+                        <a href="/install.html">Install</a>
+                    </li>
+                    <li>
+                        <a href="/antenna.html">Antenna</a>
+                    </li>
+                    <li>
+                        <a href="./modem.html">Modem</a>
+                    </li>
                 </ul>
-            </div>
     
-            <div class='header_right_wrap'>
-                <div class='refresh_wrap'>
-                    <span>Auto-Refresh</span>
-                    <select class='number-select-box'>
-                        <option value='0' selected>0</option>
-                    </select>
-    
-                    <button class=''>
-                        <span role='img'>
-                            <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
-                        </span>
-                    </button>
+                <div class="home_logo">
+                    <h2>상용저궤도위성 기반 통신체계
                 </div>
     
-                <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+                <ul>
+                    <li>
+                        <a href="/network.html">Network</a>
+                    </li>
+                    <li>
+                        <a href="/diagnostics">Diagnostics</a>
+                    </li>
+                    <li>
+                        <a href="./management.html">Management</a>
+                    </li>
+                </ul>
             </div>
+            
+
+            <div class="on-off-toggle">
+                <input class="on-off-toggle__input" type="checkbox" id="bopis" />
+                <label for="bopis" class="on-off-toggle__slider"></label>
+            </div>
+        </nav>
+
+    </header>
     
-        </header>
+    <div class="main_home">
+
+
+        <div class="main_section01">
+            <div class="main-img_wrapp section-inner">
+                <div class="main_img-ownweb">
+                    <div class="main_antena">
+                        <p>ONEWEB #0020</p>
+                        <div class="main_antena_img">
+                            <img src="/image/img3.png" alt="ONEWEB">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="dot left"></div>
+                        <div class="dash"></div>
+                        <div class="dot right"></div>
+                    </div>
+                    
+        
+                    <div class="main_antena">
+                        <p class="main-antena_text">ONEWEB #0021</p>
+                        <div class="main_antena_img">
+                            <img src="./image/img1.png" alt="ONEWEB">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="dot left"></div>
+                        <div class="dash"></div>
+                        <div class="dot right"></div>
+                    </div>
+                    
+                    <div class="main_antena">
+                        <p>ONEWEB #0022</p>
+                        <div class="main_antena_img">
+                            <img src="/image/img3.png" alt="ONEWEB">
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow_text">
+                    <p>ONLINE</p>
+                    <img src="./image/arrow_lightver.png" alt="arrow" class="arrow">
+                    <p>99MBps</p>
+                </div>
+                <div class="main-img_antena">
+                    <img src="./image/img2.png" alt="antenna">
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="main_section section2">
+            <ul class="section_list">
+                <li>
+                    <img src="./image/gear-duotone.svg" class="list-icon">
+                    <div class="question_list_wrapper">
+                        <div class="question_list">
+                            <p class="list_title">
+                            Operational Mode :
+                            </p>
+                            <p class="anser_title">normal</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Operational Software Build :
+                            </p>
+                            <p class="anser_title">main</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            System Time
+                            </p>
+                            <p class="anser_title">Sep 24, 2021, 10:15:36 AM</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Available Memory
+                            </p>
+                            <p class="anser_title">normal</p>
+                        </div>
+                    </div>
+                    <div class="list_footer">
+                        System[3.4.2]
+                    </div>
+
+                </li>
+                <li>
+                    <img src="./image/cell-signal-full.svg" class="list-icon">
+                    <div class="question_list_wrapper">
+                        <div class="question_list">
+                            <p class="list_title">
+                            Operational Mode :
+                            </p>
+                            <p class="anser_title">Online</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Operational Software Build :
+                            </p>
+                            <p class="anser_title">No Cell</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            System Time
+                            </p>
+                            <p class="anser_title">Disconnected</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Available Memory
+                            </p>
+                            <p class="anser_title">Disconnected</p>
+                        </div>
+                    </div>
+                    <div class="list_footer">
+                        Modem[3.4.2]
+                    </div>
+                </li>
+                <li>
+                    <img src="./image/lifebuoy-duotone.svg" class="list-icon">
+                    <div class="question_list_wrapper">
+                        <div class="question_list">
+                            <p class="list_title">
+                            Service Availability :
+                            </p>
+                            <p class="anser_title">0%</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Total Active Statecodes :
+                            </p>
+                            <p class="anser_title">6</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Current Recovery Action
+                            </p>
+                            <p class="anser_title">Unknown</p>
+                        </div>
+                    </div>
+                    
+                    <div class="list_footer">
+                        Fault Manafement[3.4.2]
+                    </div>
+                </li>
+                <li class="descriton_row">
+                    <img src="./image/wifi-high.svg" class="list-icon">
+                    <div class="question_list_wrapper">
+                        <div class="question_list">
+                            <p class="list_title">
+                            GNSS Fix Type :
+                            </p>
+                            <p class="anser_title">3D</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                                GNSS Fix Ouality :
+                            </p>
+                            <p class="anser_title">GPS fix (SPS)</p>
+                        </div>
+                        <div class="question_list row-flex">
+                            <p class="list_title">
+                                Time of Last 3D Fix :
+                            </p>
+                            <p class="anser_title ">Sep 24, 2021, 10:15:36 AM</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Satellites in Vew (GPS):
+                            </p>
+                            <p class="anser_title">12</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                                Satellites in Vew (GPS):
+                            </p>
+                            <p class="anser_title">8</p>
+                        </div>
+                        <div class="question_list row-flex">
+                            <p class="list_title">
+                                Last ZDA Timestamp:
+                            </p>
+                            <p class="anser_title">Sep 24, 2021, 10:15:36 AM</p>
+                        </div>
+                    </div>
+                    <div class="list_footer">
+                        GNS[0.0.0]
+                    </div>
+                </li>
+                <li>
+                    <img src="./image/download-duotone.svg" class="list-icon">
+                    <div class="question_list_wrapper">
+                        <div class="question_list">
+                            <p class="list_title">
+                            UT Management IP Address :
+                            </p>
+                            <p class="anser_title">Unknwon</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Operational Software Bundle :
+                            </p>
+                            <p class="anser_title">main</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            SoftWare & Configuration <br> Application Staus:
+                            </p>
+                            <p class="anser_title">Configuration Request not sent.
+                                <br>Waiting for Management IP
+                            </p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="list_footer">
+                        UT Network Management[7.7.2]
+                    </div>
+                </li>
+                <li>
+                    <img src="./image/gear-duotone.svg" class="list-icon">
+                    <div class="question_list_wrapper">
+                        <div class="question_list">
+                            <p class="list_title">
+                            Operational Mode :
+                            </p>
+                            <p class="anser_title">normal</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Operational Software Build :
+                            </p>
+                            <p class="anser_title">main</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            System Time
+                            </p>
+                            <p class="anser_title">Sep 24, 2021, 10:15:36 AM</p>
+                        </div>
+                        <div class="question_list">
+                            <p class="list_title">
+                            Available Memory
+                            </p>
+                            <p class="anser_title">90 MB</p>
+                        </div>
+                    </div>
+
+                    <div class="list_footer">
+                        System[3.4.2]
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var toggle = document.getElementById('bopis');
+                var arrowImage = document.querySelector('.arrow'); // 이미지 선택자
+
+                toggle.addEventListener('change', function () {
+                    if (this.checked) {
+                        document.body.classList.add('dark-mode');
+                        arrowImage.src = './image/arrow_darkver.png'; // 다크 모드 이미지로 변경
+                    } else {
+                        document.body.classList.remove('dark-mode');
+                        arrowImage.src = './image/arrow_lightver.png'; // 라이트 모드 이미지로 변경
+                    }
+                });
+            });
+
+        window.onload = function() {
+            const dashes = document.querySelectorAll('.dash');
+            const leftDots = document.querySelectorAll('.left');
+            const rightDots = document.querySelectorAll('.right');
+
+            function resetAnimation(elements, properties) {
+                elements.forEach(element => {
+                    for (const property in properties) {
+                        element.style[property] = properties[property];
+                    }
+                    element.style.animation = 'none';
+                    // 잠시 후 다시 애니메이션 시작
+                    setTimeout(() => {
+                        element.style.animation = '';
+                    }, 10);
+                });
+            }
+
+            dashes.forEach(dash => {
+                dash.addEventListener('animationend', () => {
+                    // dash와 dot 요소들을 초기화
+                    resetAnimation([dash], { width: '0' });
+                    resetAnimation(leftDots, { left: '50%', transform: 'translateX(-50%)' });
+                    resetAnimation(rightDots, { left: '50%', transform: 'translateX(-50%)' });
+
+                    // 애니메이션 재시작
+                    setTimeout(() => {
+                        dash.style.animation = 'expand 3s linear forwards';
+                        leftDots.forEach(dot => {
+                            dot.style.animation = 'moveLeft 3s linear forwards';
+                        });
+                        rightDots.forEach(dot => {
+                            dot.style.animation = 'moveRight 3s linear forwards';
+                        });
+                    }, 10);
+                });
+            });
+
+        // 최초 애니메이션 시작
+        dashes.forEach(dash => dash.style.animation = 'expand 3s linear forwards');
+        leftDots.forEach(dot => dot.style.animation = 'moveLeft 3s linear forwards');
+        rightDots.forEach(dot => dot.style.animation = 'moveRight 3s linear forwards');
+};
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const arrow = document.querySelector('.arrow');
+            arrow.style.animation = 'expandArrow 3s ease-in-out infinite'; // 시간을 더 짧게 설정
+        });
+
+
+
+    </script>
 </body>
 </html>

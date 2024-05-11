@@ -1,12 +1,57 @@
+/* font */
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Thin.woff');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-ExtraLight.woff');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Light.woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Medium.woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-SemiBold.woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Bold.woff');
+    font-weight: 700;
+}
+
+
 
 /* login */
 
-button{
+button {
     box-shadow: none;
     border: none;
 }
 
-.login{
+.login {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -20,7 +65,7 @@ button{
     position: absolute;
 }
 
-.video-background iframe{
+.video-background iframe {
     z-index: -1;
     width: 100vw;
     height: 100vh;
@@ -28,15 +73,15 @@ button{
 }
 
 
-.login_wrap{
+.login_wrap {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-    font-family: 'Pretendard',sans-serif;
+    transform: translate(-50%, -50%);
+    font-family: 'Pretendard', sans-serif;
 }
 
-.login_form{
+.login_form {
     background: rgba(0, 0, 0, 0.2);
     width: 400px;
     height: 300px;
@@ -44,17 +89,17 @@ button{
     border-radius: 12px;
 }
 
-.login_form form{
+.login_form form {
     width: 100%;
     flex-direction: column;
     display: flex;
 }
 
-.login_form form .info{
+.login_form form .info {
     width: 100%;
 }
 
-.login_form input{
+.login_form input {
     width: 100%;
     height: 50px;
     border-radius: 5px;
@@ -63,54 +108,54 @@ button{
     border: none;
 }
 
-.login_form input:first-child{
+.login_form input:first-child {
     margin-bottom: 0.8rem;
 }
 
-.submit-btn{
+.submit-btn {
     border-radius: 15px;
-background:  #000dc7;
-width: 100%;
-height: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 18px;
-font-weight: 600;
-color: #fff;
-font-family: 'Pretendard',sans-serif;
-margin-top: 12px;
-text-decoration: none;
+    background: #000dc7;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Pretendard', sans-serif;
+    margin-top: 12px;
+    text-decoration: none;
 }
 
-.remember_wrapp{
+.remember_wrapp {
     display: flex;
     align-items: center;
     margin: 12px 0;
     gap: 10px;
 }
 
-.remember_wrapp input[type="checkbox"]{
+.remember_wrapp input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 5px;
     margin: 0;
 }
 
-.remember_wrapp label{
+.remember_wrapp label {
     font-size: 14px;
-    font-family: 'Pretendard',sans-serif;
+    font-family: 'Pretendard', sans-serif;
 }
 
-.form-title{
+.form-title {
     text-align: center;
-    margin: 15px 0 20px; 
+    margin: 15px 0 20px;
     font-size: 25px;
-    font-family: 'Pretendard',sans-serif;
+    font-family: 'Pretendard', sans-serif;
     font-weight: 600;
 }
 
-.login-title{
+.login-title {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
@@ -119,7 +164,7 @@ text-decoration: none;
     line-height: 1.2;
 }
 
-.signUp_link{
+.signUp_link {
     font-size: 12px;
     color: #222;
     text-decoration: none;
@@ -128,31 +173,483 @@ text-decoration: none;
 }
 
 
-.signUp_link span{
+.signUp_link span {
     color: #000dc7;
 }
 
 
 /* 로그아웃 */
-.logout_info{
+.logout_info {
     text-align: center;
 }
 
 
-.logout_form{
+.logout_form {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.logout_form p{
+.logout_form p {
     font-size: 26px;
     line-height: 1.2;
-    font-family: 'Pretendard',sans-serif;
+    font-family: 'Pretendard', sans-serif;
     color: #777;
 }
 
-.logout_form .submit-btn{
+.logout_form .submit-btn {
     width: 150px;
     margin: 20px auto;
+}
+
+
+/* home */
+
+
+.on-off-toggle {
+    width: 56px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.on-off-toggle__slider {
+    width: 76px;
+    height: 26px;
+    display: block;
+    border-radius: 34px;
+    background-color: #d8d8d8;
+    transition: background-color 0.4s
+}
+
+.on-off-toggle__slider:before {
+    content: '';
+    display: block;
+    background-color: #000;
+    box-shadow: 0 0 0 1px #949494;
+    bottom: 2px;
+    height: 18px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 18px;
+    z-index: 5;
+    border-radius: 100%;
+}
+
+.on-off-toggle__slider:after {
+    display: block;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    content: 'DARK';
+    color: #000;
+    padding-left: 26px;
+    transition: all 0.4s;
+}
+
+.on-off-toggle__input {
+    /*
+      This way of hiding the default input is better 
+      for accessibility than using display: none;
+    */
+    position: absolute;
+    opacity: 0;
+}
+
+.on-off-toggle__input:checked+.on-off-toggle__slider {
+    background-color: #fff;
+}
+
+.on-off-toggle__input:checked+.on-off-toggle__slider:before {
+    transform: translateX(50px);
+}
+
+.on-off-toggle__input:checked+.on-off-toggle__slider:after {
+    content: 'WHITE';
+    color: #000;
+    padding-left: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: OpenSans, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.alata-regular {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+}
+
+
+
+.home_nave{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70px;
+    border-bottom: 1px solid #eff2f4;
+}
+
+.nav_list{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home_nave nav{
+    padding: 25px 70px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.on-off-toggle{
+
+}
+
+.nav_list ul{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav_list ul li{
+    padding: 0 50px;
+}
+
+.nav_list ul li:first-child{
+    padding: 0 50px 0 0 ;
+}
+.nav_list ul li:last-child{
+    padding: 0 0 0 50px;
+}
+.nav_list ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-family: "Alata", sans-serif;
+}
+
+.home_logo{
+    color: #38393a;
+    font-family: 'Pretendard';
+    font-weight: 500;
+    margin: 0 50px;
+}
+
+.main_home{
+    width: 100%;
+    height: 100vh;
+}
+
+.main_section01{
+    background: url('../image/bg_lightver..png') no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+}
+
+.section-inner{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.main_section{
+    height: 100vh;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.main_img-ownweb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px
+}
+
+.main_antena_img {
+    width: 300px;
+    height: auto;
+}
+
+.main_antena_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* 
+.arrow_text img{
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    margin: 50px 0;
+} */
+
+
+.arrow_text{
+    height: 200px;
+    margin: 50px 0;
+}
+.arrow {
+    display: block; /* 화살표 이미지를 블록 요소로 설정 */
+    width: auto; /* 이미지의 너비를 적절히 설정 */
+    height: 200px; /* 이미지의 원래 높이 유지 */
+    transform-origin: center; /* 변형이 중앙에서 일어나도록 설정 */
+    animation: expandArrow 8s ease-in-out infinite; /* 계속 반복 */
+    object-fit: contain;
+}
+
+@keyframes expandArrow {
+    0%, 100% {
+        transform: scaleY(0.3); /* 시작과 동시에 0, 100%에서도 0 */
+    }
+    49.999% {
+        transform: scaleY(1); /* 최대 높이에 이르렀다가 바로 다시 0으로 */
+    }
+}
+
+
+
+.line-dot{
+    transform: rotate(90deg);
+}
+
+
+.main_antena p {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    color: #828283;
+    font-size: 14px;
+}
+
+.main_antena p.main-antena_text{
+    color: #000;
+}
+
+.main_antena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.arrow_text p {
+    font-size: 70px;
+    font-weight: 600;
+    font-family: "Alata", sans-serif;
+}
+
+.main-img_antena {
+    width: 320px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+.main-img_antena img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section_list li {
+    width: 30%;
+    background: #fbfbfb;
+    border-radius: 12px;
+
+    border: 1px solid #d3d3d3;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+li.descriton_row .question_list.row-flex{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.question_list_wrapper{
+    padding: 20px 30px 20px;
+    box-sizing: border-box;
+    border-radius: 9px 9px 0 0;
+    height: 290px;
+}
+
+p.list_title {
+    color: #696969;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+p.anser_title {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+}
+
+.question_list {
+    margin-bottom: 0.4rem;
+}
+
+li.descriton_row .question_list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul.section_list {
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    row-gap: 50px;
+    justify-content: space-between;
+}
+
+.list_footer {
+    width: 100%;
+    background: #e3e3e3;
+    color: #4397e0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pretendard';
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
+}
+
+.list-icon{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    width: 15%; /* 선의 전체 길이에 맞게 조절 */
+    position: relative;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #696969;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.left {
+    left: 50%; /* 중앙에서 시작 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    animation: moveLeft 3s linear forwards; /* 왼쪽으로 이동 */
+}
+
+.right {
+    left: 50%; /* 중앙에서 시작 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    animation: moveRight 3s linear forwards; /* 오른쪽으로 이동 */
+}
+
+.dash {
+    position: absolute;
+    height: 2px;
+    background-image: linear-gradient(to right, #696969 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 9px 2px;
+    background-repeat: repeat-x;
+    width: 0; /* 초기 상태 */
+    left: 50%; /* 가운데에서 시작 */
+    transform: translateX(-50%);
+    animation: expand 3s linear forwards;
+}
+
+@keyframes expand {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes moveLeft {
+    from { left: 50%; }
+    to { left: 0%; }
+}
+
+@keyframes moveRight {
+    from { left: 50%; }
+    to { left: 100%; }
+}
+
+
+
+
+/* darkmode */
+
+.dark-mode .main_section01{
+    background: #fff url('../image/bg_dark.png') no-repeat;
+    background-size: 100%;
+}
+
+.dark-mode .nav_list ul li a{
+    color: #fff;
+}
+
+.dark-mode .home_logo{
+    color: #fff;
+}
+
+.dark-mode .arrow_text p{
+    color: #fff;
+}
+
+.dark-mode .main_section{
+    background: #000;
+}
+
+.dark-mode .question_list_wrapper{
+    background: linear-gradient(132deg, rgb(26 26 26) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.dark-mode .section_list li{
+    border: 1px solid #101010;
+}
+
+
+.dark-mode p.anser_title{
+    color: #fff;
+}
+
+.dark-mode .list_footer{
+    background: #1c1c1c;
+}
+
+.dark-mode .main_antena p.main-antena_text {
+    color: #fff;
 }
