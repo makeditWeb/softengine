@@ -272,17 +272,6 @@ button {
     padding-left: 10px;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: OpenSans, sans-serif;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
 .alata-regular {
@@ -644,6 +633,7 @@ ul.section_list {
 
 .dark-mode p.anser_title{
     color: #fff;
+    font-family: 'Pretendard';
 }
 
 .dark-mode .list_footer{
@@ -652,4 +642,117 @@ ul.section_list {
 
 .dark-mode .main_antena p.main-antena_text {
     color: #fff;
+    font-family: 'Pretendard';
+}
+
+
+.menu_list > li a{
+    color: #000;
+    text-decoration: none;
+}
+
+.menu_list > li:hover, .menu_list > li.active a{
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Pretendard';
+}
+
+.left_main-title h2{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-weight:600;
+    font-family: 'Pretendard';
+    font-size: 22px;
+}
+
+.setup_bottom{
+    padding: 10px;
+}
+
+.setup_header {
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: #e1e1e1;
+    border-bottom: 1px solid #d1d1d1;
+    height: 40px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-family: 'Pretendard';
+}
+
+.setup_body {
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 0 0 12px 12px;
+}
+
+.setup_body_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.setup_body_list:last-child{
+    margin-bottom: 0;
+}
+
+.setup_list {
+    margin-bottom: 1rem;
+}
+
+.select_title{
+    font-weight: 400;
+    font-family: 'Pretendard';
+    font-size: 14px;
+}
+
+.setup_body_list input[type="text"],
+.setup_body_list select {
+    border: 1px solid #dfdfdf;
+    height: 35px;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container{
+	width: 500px;
+	margin: 0 auto;
+}
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul.tabs li{
+	background: none;
+	color: #222;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+ul.tabs li.current{
+	background: #ededed;
+	color: #222;
+}
+
+.tab-content{
+	display: none;
+}
+
+.tab-content.current{
+	display: inherit;
+}
+
+.table_wrap{
+    width: 100%;
 }

@@ -8,7 +8,9 @@
 
     <link rel="stylesheet" type="text/css" href='./css/reset.css' />
     <link rel="stylesheet" type="text/css" href='./css/globals.css' />
-    <link rel="stylesheet" type="text/css" href='./css/network.css' />
+    <link rel="stylesheet" type="text/css" href='./css/management.css' />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 
@@ -16,74 +18,704 @@
 </head>
 
 <body>
-        <!-- 상단 GNB 영역 -->
-        <header class='header_container'>
-            <div class='header_left_wrap'>
-                <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
-                <ul class='nav_list'>
-                    <li><a href='./index.html'>xHome</a></li>
-                    <li><a href='./install.html'>Install</a></li>
-                    <li><a href='./antenna.html'>Antenna</a></li>
-                    <li ><a href='./modem.html'>Modem</a></li>
-                    <li><a href='./network.html'>Network</a></li>
-                    <li><a href='./configuration.html'>Diagnostics</a></li>
-                    <li class='active' ><a href='./management.html'>Management</a></li>
-                </ul>
+    <!-- 상단 GNB 영역 -->
+    <header class='header_container'>
+        <div class='header_left_wrap'>
+            <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
+            <ul class='nav_list'>
+                <li><a href='./index.html'>xHome</a></li>
+                <li><a href='./install.html'>Install</a></li>
+                <li class='active'><a href='./antenna.html'>Antenna</a></li>
+                <li><a href='./modem.html'>Modem</a></li>
+                <li><a href='./network.html'>Network</a></li>
+                <li><a href='./configuration.html'>Diagnostics</a></li>
+                <li><a href='./management.html'>Management</a></li>
+            </ul>
+        </div>
+
+        <div class='header_right_wrap'>
+            <div class='refresh_wrap'>
+                <span>Auto-Refresh</span>
+                <select class='number-select-box'>
+                    <option value='0' selected>0</option>
+                </select>
+
+                <button class=''>
+                    <span role='img'>
+                        <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
+                    </span>
+                </button>
             </div>
-    
-            <div class='header_right_wrap'>
-                <div class='refresh_wrap'>
-                    <span>Auto-Refresh</span>
-                    <select class='number-select-box'>
-                        <option value='0' selected>0</option>
-                    </select>
-    
-                    <button class=''>
-                        <span role='img'>
-                            <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
-                        </span>
-                    </button>
-                </div>
-    
-                <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
-            </div>
-    
-        </header>
+
+            <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+        </div>
+
+    </header>
 
     <main>
         <aside class='menu_wrap'>
             <ul class='menu_list'>
-                <li ><a href="./networkStats.html">Network Stats</a></li>
-                <li class='active'><a href="./network.html" >Packet Graphs</a></li>
+                <li class='active'><a href="./networkStats.html">Network Stats</a></li>
+                <li><a href="./packet.html">Packet Graphs</a></li>
             </ul>
         </aside>
 
         <section class='content_wrap'>
-            <div class='left_chart_wrap'>
-                <h2>Packet Graphs</h2>
-                <canvas id="leftGridChart"></canvas>
-            </div>
-            <div class='content_right_wrap'>
-                <div class='right_content_wrap'>
-                    <ul class='code_wrap'>
-                        <li class='code_wrap_header'>Current Active Statecodes</li>
-                        <li class='selected'>3.4.2</li>
-                        <li>4.2.2</li>
-                        <li>4.3.2</li>
-                        <li>7.7.2</li>
-                        <li>4.1.3</li>
-                        <li>0.0.0</li>
-                    </ul>
-                    <ul class='code_wrap'>
-                        <li class='code_wrap_header'>Current Recovery Actions</li>
-                        <li class='selected'>None</li>
-                    </ul>
+            <ul class="tabs">
+                <li class="tab-link current" data-tab="tab-1">CNX Interface</li>
+                <li class="tab-link" data-tab="tab-2">Antenna Interface</li>
+                <li class="tab-link" data-tab="tab-3">Management Interface</li>
+                <li class="tab-link" data-tab="tab-4">WAN Interface</li>
+            </ul>
+
+
+            <div id="tab-1" class="tab-content current">
+                <div class='table_wrap'>
+                    <table cellpadding="0">
+                        <tr >
+                            <td>
+                                <p>Interface Name</p>
+                            </td>
+                            <td>
+                                eth0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface IPv4 Adress</p>
+                            </td>
+                            <td>
+                                <p>192.168.100.30</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Adress Mask</p>
+                            </td>
+                            <td>
+                                <p>255.255.255.128</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='active'>
+                                <p>Interface IPv6 Unique Local Address</p>
+                            </td>
+                            <td>
+                                <p>fd0d:edc3:e12a:100::1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Duplex</p>
+                            </td>
+                            <td>
+                                <p>Full</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Mac Address</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Speed</p>
+                            </td>
+                            <td>
+                                <p>
+                                    100Mb/s
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Status</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Multicast Received</p>
+                            </td>
+                            <td>
+                                <p>100Mb/s</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Receved Bytes</p>
+                            </td>
+                            <td>
+                                <p>Up</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Bytes</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Dropped</p>
+                            </td>
+                            <td>
+                                <p>1,151,218<span>(1 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Packets</p>
+                            </td>
+                            <td>
+                                <p>15,8.2 <span>(15 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Bytes</p>
+                            </td>
+                            <td>
+                                <p>10,505,275 <span>(10 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Dropped</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Packets</p>
+                            </td>
+                            <td>
+                                <p>16,423 <span>(16k)</span></p>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
                 </div>
-                <div class='right_chart_wrap'>
-                    <div class='chart_header'>
-                        <span>Availability: 0%</span>
-                    </div>
-                    <canvas id="rightPieChart"></canvas>
+
+            </div>
+            <div id="tab-2" class="tab-content">
+                <div class='table_wrap'>
+                    <table cellpadding="0">
+                        <tr class='active'>
+                            <td>
+                                <p>Interface Name</p>
+                            </td>
+                            <td>
+                                eth0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface IPv4 Adress</p>
+                            </td>
+                            <td>
+                                <p>192.168.100.30</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Adress Mask</p>
+                            </td>
+                            <td>
+                                <p>255.255.255.128</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface IPv6 Unique Local Address</p>
+                            </td>
+                            <td>
+                                <p>fd0d:edc3:e12a:100::1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Duplex</p>
+                            </td>
+                            <td>
+                                <p>Full</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Mac Address</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Speed</p>
+                            </td>
+                            <td>
+                                <p>
+                                    100Mb/s
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Status</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Multicast Received</p>
+                            </td>
+                            <td>
+                                <p>100Mb/s</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Receved Bytes</p>
+                            </td>
+                            <td>
+                                <p>Up</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Bytes</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Dropped</p>
+                            </td>
+                            <td>
+                                <p>1,151,218<span>(1 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Packets</p>
+                            </td>
+                            <td>
+                                <p>15,8.2 <span>(15 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Bytes</p>
+                            </td>
+                            <td>
+                                <p>10,505,275 <span>(10 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Dropped</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Packets</p>
+                            </td>
+                            <td>
+                                <p>16,423 <span>(16k)</span></p>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <div class='table_wrap'>
+                    <table cellpadding="0">
+                        <tr class='active'>
+                            <td>
+                                <p>Interface Name</p>
+                            </td>
+                            <td>
+                                eth0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface IPv4 Adress</p>
+                            </td>
+                            <td>
+                                <p>192.168.100.30</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Adress Mask</p>
+                            </td>
+                            <td>
+                                <p>255.255.255.128</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface IPv6 Unique Local Address</p>
+                            </td>
+                            <td>
+                                <p>fd0d:edc3:e12a:100::1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Duplex</p>
+                            </td>
+                            <td>
+                                <p>Full</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Mac Address</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Speed</p>
+                            </td>
+                            <td>
+                                <p>
+                                    100Mb/s
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Status</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Multicast Received</p>
+                            </td>
+                            <td>
+                                <p>100Mb/s</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Receved Bytes</p>
+                            </td>
+                            <td>
+                                <p>Up</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Bytes</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Dropped</p>
+                            </td>
+                            <td>
+                                <p>1,151,218<span>(1 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Packets</p>
+                            </td>
+                            <td>
+                                <p>15,8.2 <span>(15 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Bytes</p>
+                            </td>
+                            <td>
+                                <p>10,505,275 <span>(10 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Dropped</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Packets</p>
+                            </td>
+                            <td>
+                                <p>16,423 <span>(16k)</span></p>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-4" class="tab-content">
+                <div class='table_wrap'>
+                    <table cellpadding="0">
+                        <tr class='active'>
+                            <td>
+                                <p>Interface Name</p>
+                            </td>
+                            <td>
+                                eth0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface IPv4 Adress</p>
+                            </td>
+                            <td>
+                                <p>192.168.100.30</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Adress Mask</p>
+                            </td>
+                            <td>
+                                <p>255.255.255.128</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface IPv6 Unique Local Address</p>
+                            </td>
+                            <td>
+                                <p>fd0d:edc3:e12a:100::1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Duplex</p>
+                            </td>
+                            <td>
+                                <p>Full</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Mac Address</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Speed</p>
+                            </td>
+                            <td>
+                                <p>
+                                    100Mb/s
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Interface Status</p>
+                            </td>
+                            <td>
+                                <p>00:51:82:11:22:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Multicast Received</p>
+                            </td>
+                            <td>
+                                <p>100Mb/s</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Receved Bytes</p>
+                            </td>
+                            <td>
+                                <p>Up</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Bytes</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Dropped</p>
+                            </td>
+                            <td>
+                                <p>1,151,218<span>(1 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Received Packets</p>
+                            </td>
+                            <td>
+                                <p>15,8.2 <span>(15 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Bytes</p>
+                            </td>
+                            <td>
+                                <p>10,505,275 <span>(10 MB)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Dropped</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Errors</p>
+                            </td>
+                            <td>
+                                <p>0</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Transmitted Packets</p>
+                            </td>
+                            <td>
+                                <p>16,423 <span>(16k)</span></p>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -100,7 +732,25 @@
         </div>
     </footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/chart.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('ul.tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+            })
+
+        })
+    </script>
 </body>
 
 </html>
