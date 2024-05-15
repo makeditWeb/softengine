@@ -15,39 +15,261 @@
 <body>
     
 
-        <!-- 상단 GNB 영역 -->
-        <header class='header_container'>
-            <div class='header_left_wrap'>
-                <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
-                <ul class='nav_list'>
-                    <li><a href='./index.html'>xHome</a></li>
-                    <li><a href='./install.html'>Install</a></li>
-                    <li><a href='./antenna.html'>Antenna</a></li>
-                    <li class='active'><a href='./modem.html'>Modem</a></li>
-                    <li><a href='./network.html'>Network</a></li>
-                    <li><a href='./configuration.html'>Diagnostics</a></li>
-                    <li ><a href='./management.html'>Management</a></li>
-                </ul>
+
+    <!-- 상단 GNB 영역 -->
+    <header class='header_container'>
+        <div class='header_left_wrap'>
+            <img src='assets/image/logo_l.png' alt='큰 크기의 대한민국 국방부 로고' />
+            <ul class='nav_list'>
+                <li><a href='./index.html'>xHome</a></li>
+                <li><a href='./install.html'>Install</a></li>
+                <li ><a href='./antenna.html'>Antenna</a></li>
+                <li><a href='./modem.html'>Modem</a></li>
+                <li><a href='./network.html'>Network</a></li>
+                <li><a href='./configuration.html'>Diagnostics</a></li>
+                <li class='active'><a href='./management.html'>Management</a></li>
+            </ul>
+        </div>
+
+        <div class='header_right_wrap'>
+            <div class='refresh_wrap'>
+                <span>Auto-Refresh</span>
+                <select class='number-select-box'>
+                    <option value='0' selected>0</option>
+                </select>
+
+                <button class=''>
+                    <span role='img'>
+                        <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
+                    </span>
+                </button>
             </div>
-    
-            <div class='header_right_wrap'>
-                <div class='refresh_wrap'>
-                    <span>Auto-Refresh</span>
-                    <select class='number-select-box'>
-                        <option value='0' selected>0</option>
-                    </select>
-    
-                    <button class=''>
-                        <span role='img'>
-                            <img src='assets/svg/power.svg' alt='전원 버튼 이미지' width='18px' height='18px' />
-                        </span>
-                    </button>
+
+            <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+        </div>
+
+    </header>
+
+    <main>
+        <aside class='menu_wrap'>
+            <ul class='menu_list'>
+                <li>Modem Info</li>
+                <li>Modem Status</li>
+                <li>Modem Control Panel</li>
+                <li  class='active'>Oneweb Extension</li>
+                <li>SMQ Logging</li>
+                <li>GNSS Stats</li>
+                <li>PPS Stats</li>
+            </ul>
+        </aside>
+
+        <section class='content_wrap modem_flex'>
+
+            <div class="center_left">
+                <div class="center_head">
+                    QMI Client Connected
                 </div>
-    
-                <img src='assets/image/logo_m.png' alt='중간 크기의 로고' />
+                <div class="right_top">
+                    <div class="table_header">
+                        <p>Requests / Responses</p>
+                        <div class="clear_status">Clear Stats</div>
+                    </div>
+                    <div class="table_body">
+                        <ul>
+                            <li class="table_body_bold">Total</li>
+                            <li class="table_body_td">40,334/40,332</li>
+                            <li class="table_minus">(-2)</li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Acquisition Status</li>
+                            <li class="table_body_td">17,007/17,007</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Cancel Receive Channel</li>
+                            <li class="table_body_td">585/585</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Cancel Track</li>
+                            <li class="table_body_td">586/585</li>
+                            <li class="table_minus">(-1)</li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Get Supported Fields</li>
+                            <li class="table_body_td">0/0</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Get Supported Messages</li>
+                            <li class="table_body_td">0/0</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Get UT Capabilities</li>
+                            <li class="table_body_td">1/1</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Register Event</li>
+                            <li class="table_body_td">1/1</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Send Modem Fault Report</li>
+                            <li class="table_body_td">2,230/2,230</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Send Moderm-to-Host Report</li>
+                            <li class="table_body_td">0/0</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Set True North Calibrantion</li>
+                            <li class="table_body_td">0/0</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">SINR Measurement</li>
+                            <li class="table_body_td">0/0</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">SINR Measurement Status</li>
+                            <li class="table_body_td">8,997/8,997</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Track</li>
+                            <li class="table_body_td">1,000/1,000</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Track Advisory</li>
+                            <li class="table_body_td">586/585</li>
+                            <li class="table_minus">(-1)</li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Tune Receive Channel</li>
+                            <li class="table_body_td">9,341/9,341</li>
+                            <li class="table_minus"></li>
+                        </ul>
+                        <ul>
+                            <li class="table_body_bold">Tune Trasmit Channel</li>
+                            <li class="table_body_td">0/0</li>
+                            <li class="table_minus"></li>
+                        </ul>
+         
+                    </div>
+                </div>
             </div>
+            <div class="center_right">
+
+                <div class="center_side">
+                    <div class="right_top">
+                        <div class="table_header">
+                            <p>Requests / Responses</p>
+                        </div>
+                        <div class="table_body">
+                            <ul>
+                                <li>Total</li>
+                                <li>69,083</li>
+                            </ul>
+                            <ul>
+                                <li>Calibration Complete</li>
+                                <li>07</li>
+                            </ul>
+                            <ul>
+                                <li>Gain Update</li>
+                                <li>69,082</li>
     
-        </header>
+                            </ul>
+                            <ul>
+                                <li>Start/Stop SINR</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>UT Fault Report</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right_top">
+                        <div class="table_header">
+                            <p>Faults</p>
+                        </div>
+                        <div class="table_body">
+                            <ul class="pink_table">
+                                <li>Total</li>
+                                <li>2,230</li>
+                            </ul>
+                            <ul>
+                                <li>Cold Start Fail</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>Bad Ephemeris</li>
+                                <li>0</li>
+    
+                            </ul>
+                            <ul class="pink_table">
+                                <li>Missing Gain Update</li>
+                                <li>2,228</li>
+                            </ul>
+                            <ul>
+                                <li>Invalid Fault</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>Location Sync Lost</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>Location Sync Missing</li>
+                                <li>0</li>
+                            </ul>
+                            <ul class="pink_table">
+                                <li>Invalid Parameter</li>
+                                <li>1</li>
+                            </ul>
+                            <ul class="pink_table">
+                                <li>Missing Response</li>
+                                <li>1</li>
+                            </ul>
+                            <ul>
+                                <li>SINR Reporting Not Started</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>Time Sync Lost</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>Time Sync Missing</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>Unsupported UT Capability</li>
+                                <li>0</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class='footer_container'>
+        <div class='footer_left_wrap'>
+            <img src='assets/svg/git-branch.svg' alt='깃 그래프 아이콘' width='18px' height='18px' />
+            <span>SSM_3.2.1.91 (main)</span>
+        </div>
+        <div class='footer_right_wrap'>
+            <img src='assets/svg/clock.svg' alt='시계 아이콘' width='18px' height='18px' />
+            <span>Uptime 0.17.53.39</span>
+        </div>
+    </footer>
 </body>
 <script src="./js/aside.js"></script>
 </html>

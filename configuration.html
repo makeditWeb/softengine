@@ -66,19 +66,25 @@
             </aside>
     
             <section class='content_wrap'>
-                <div class='top_header_wrap'>
-                    <h2>UT Network Management Status and Statistics</h2>
+                <div class='top_header_wrap flex-column'>
+                    <h2>UT Configuration</h2>
+                    <div class="btn_wrap">
+                        <button type="button" class="btn btn-submit">Save</button>
+                        <button type="button" class="btn btn-reload">Reload</button>
+                    </div>
+                    <input type="text" placeholder="Filter by regex or string">
                 </div>
     
-                <div class='table_wrap'>
+                <div class='table_wrap table_configu'>
                     <table cellpadding="0">
-                        <thead>
-                            <tr>
-                                <th>Group</th>
-                                <th>Name</th>
-                                <th>Value</th>
-                                <th>Sourece</th>
+                        <tbody>
+                            <tr class="active">
+                                <td>Group</td>
+                                <td>Name</td>
+                                <td>Value</td>
+                                <td>Sourece</td>
                             </tr>
+
                             <tr>
                                 <td>firewall</td>
                                 <td>ces_enabled</td>
@@ -199,7 +205,7 @@
                                 <td class="table_value">507070</td>
                                 <td>cfg_default.json</td>
                             </tr>
-                        </thead>
+                        </tbody>
                     </table>
     
                 </div>

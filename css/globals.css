@@ -27,7 +27,7 @@
 
 /* 좌측 로고 */
 .header_left_wrap > img {
-    width: 128px;
+    width: 150px;
     height: auto;
 
     margin-right: 20px;
@@ -47,18 +47,20 @@
   font-size: 18px;
   line-height: 125%;
   text-decoration: none;
-  color: #5c5c5c;
-
+  color: #929292;
+  font-family: 'Pretendard';
   cursor: pointer;
 }
 
 .nav_list > li > a:hover {
   color: #202020;
+  font-weight: 600;
 }
 
 
 .nav_list > li.active > a {
     color: #000000;
+    font-weight: 600;
 }
 
 /* GNB 우측 영역 */
