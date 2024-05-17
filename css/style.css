@@ -298,7 +298,6 @@ button {
 }
 
 
-
 .home_nave{
     position: fixed;
     top: 0;
@@ -306,6 +305,9 @@ button {
     width: 100vw;
     height: 70px;
     border-bottom: 1px solid #eff2f4;
+
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 100;
 }
 
 .nav_list{
@@ -895,7 +897,7 @@ ul.pink_table {
 /* darkmode */
 
 .dark-mode .main_section01{
-    background: #fff url('../image/bg_dark.png') no-repeat;
+    background: #000 url('../image/bg_dark.png') no-repeat;
     background-size: 100%;
 }
 
