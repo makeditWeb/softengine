@@ -306,7 +306,7 @@ button {
     height: 70px;
     border-bottom: 1px solid #eff2f4;
 
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255);
     z-index: 100;
 }
 
@@ -367,6 +367,7 @@ button {
 .main_section01{
     background: url('../image/bg_lightver..png') no-repeat;
     background-position: center;
+    background-position-y: top;
     width: 100%;
     height: 100vh;
     background-size: 100%;
@@ -895,6 +896,11 @@ ul.pink_table {
 
 
 /* darkmode */
+
+.dark-mode .home_nave {
+    background: rgba(0, 0, 0);
+    border-bottom: 1px solid #2b2b2b
+}
 
 .dark-mode .main_section01{
     background: #000 url('../image/bg_dark.png') no-repeat;
